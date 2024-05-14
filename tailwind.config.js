@@ -14,13 +14,15 @@ module.exports = {
       colors: {
         bl: "#282A3A",
         red: "#6D1600",
+        ld: "#282A3A",
       },
 
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
         playfairsc: ["Playfair Display SC", "serif"],
-        playfairDisplay: ["Playfair Display", "serif"], 
+        playfairDisplay: ["Playfair Display", "serif"],
+        plusjakartaSans: ["Plus Jakarta Sans", "sans-serif"],
       },
 
       borderRadius: {
