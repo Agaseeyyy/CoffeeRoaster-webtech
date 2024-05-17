@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CoffeeRoaster</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="output.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="headerFooterManager.js"></script>
+</head>
+<body class="font-poppins">
+    <special-header></special-header>
+    <!-- ENDS -->
+    <main>
+    <!-- CONTACT -->
+        <section class="bg-customred bg-opacity-15 min-h-screen text-xl 2xl:text-base xl:text-sm grid place-items-center xs:bg-white xs:items-start">
+            <div id="container" class="container max-w-xl2 pl-2 pr-2 2xl:max-w-xl xl:max-w-lg lg:max-w-md md:max-w-sm sm:max-w-xs xs:w-full">
+            
+                <div class="grid place-content-center place-items-center grid-cols-2 py-36 2xl:py-20 xl:py-10 md:grid-flow-row md:grid-cols-1 md:gap-">
+                    <div class="grid gap-10 xl:gap-10 md:grid-flow-col md:row-start-2 xs:hidden">
+                        <img src="/img/c1.png" alt="Clipart 1" class="w-80 2xl:w-60 xl:w-52">
+                        <img src="/img/c2.png" alt="Clipart 2" class="2xl:w-60 xl:w-52">
+                    </div>
+                    
+                    <form id="contacts" class="drop-shadow-2xl  bg-white border border-customred rounded-3xl  p-8 grid grid-flow-row place-items-center w-[500px] h-[694px] 2xl:w-4/6 2xl:h-full xl:w-3/4 xl:my-10 lg:w-11/12 md:w-2/3 sm:w-11/12 xs:w-full xs:border-none xs:rounded-none xs:drop-shadow-none xs:py-0" action="">
+                        <h1 class="text-2xl font-bold place-self-start 2xl:text-xl xl:text-lg">Contact Us</h1>
+                        <div class="flex flex-col w-full gap-y-2">
+                            <label for="name" class="font-semibold">Name</label>
+                            <input type="text" id="name" placeholder="Enter your Name" class="h-14 border border-customred rounded-md px-4 py-2 focus:outline-none 2xl:h-12 lg:h-10 lg:text-xs xs:h-12">
+                        </div>
+                        <div class="flex flex-col w-full gap-y-2">
+                            <label for="email" class="font-semibold">Email</label>
+                            <input type="email" id="email" placeholder="Enter your Email Address" class="h-14 border border-customred rounded-md px-4 py-2 focus:outline-none 2xl:h-12 lg:h-10 lg:text-xs xs:h-12">
+                        </div>
+                        <div class="flex flex-col w-full gap-y-2">
+                            <label for="message" class="font-semibold">Message</label>
+                            <textarea id="message" rows="4" cols="size-full" placeholder="Enter messages" class="h-44 border border-customred rounded-md px-4 py-2 focus:outline-none lg:text-xs lg:h-32 xs:h-44"></textarea>
+                        </div>
+
+                        <button class="w-full h-16 bg-customred rounded-[35px] text-white font-bold self-start hover:bg-rose-700 duration-200 ease-in-out focus:outline-none 2xl:h-12 2xl:self-end lg:h-10 lg:text-xs xs:h-12 xs:text-sm" type="submit">Send</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- ENDS -->
+    </main>
+    
+    <!-- FOOTER-->
+    <special-footer></special-footer>
+    <!-- ENDS -->
+    <script src="script.js"></script>
+</body>
+</html>
