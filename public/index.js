@@ -302,15 +302,21 @@ function renderBlogPost(blogpost) {
             </div>
         </div>
     `;
-  blogsContainer.forEach((container) => {
-    container.appendChild(blogElement.cloneNode(true));
-  });
-}
 
-for (let i = blogposts.length - 1; i > blogposts.length - 4; i--) {
-  console.log(i);
-  renderBlogPost(blogposts[i]);
+  if(window.location.hash !== "#readMoreBlogs"){
+    blogsContainer[0].appendChild(blogElement.cloneNode(true));
+    blogsContainer[2].appendChild(blogElement.cloneNode(true));
+  }
+  if(window.location.hash === "#readMoreBlogs"){
+    blogsContainer[1].appendChild(blogElement.cloneNode(true));
+  }
 }
+if(window.location.hash !== "#readMoreBlogs"){
+  for (let i = blogposts.length - 1; i > blogposts.length - 4; i--) {
+    renderBlogPost(blogposts[i]);
+  }
+} 
+
 
 const clickedPost = sessionStorage.getItem("storedId");
 if (clickedPost) {
@@ -345,8 +351,8 @@ window.addEventListener("hashchange", function () {
   }
   if (lasthash === "#readMoreBlogs" && history !== "#readMoreBlogs") {
     sessionStorage.removeItem("readmore");
-    document.getElementById("home").classList.remove("hidden");
     document.getElementById("readMoreBlogs").classList.add("hidden");
+    document.getElementById("home").classList.remove("hidden");
   }
   if (history == "#dailystories") {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -377,7 +383,7 @@ function readBlog(blogopen) {
 
 //shows other posts available
 function storiesReadMore() {
-  for (let i = blogposts.length - 4; i >= 0; i--) {
+  for (let i = blogposts.length - 1; i >= 0; i--) {
     renderBlogPost(blogposts[i]);
   }
   document.getElementById("readMoreBlogs").classList.remove("hidden");
@@ -387,6 +393,6 @@ function storiesReadMore() {
 }
 
 const readmore = sessionStorage.getItem("readmore");
-if (readmore) {
+if(readmore && window.location.hash === "#readMoreBlogs") {
   storiesReadMore();
 }
