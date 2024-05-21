@@ -1,17 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./public/*.{html,js}"],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     container: {
       center: true,
     },
     screens: {
-      '2xl': {'max' : '1536px'},
-      'xl': {'max' : '1280px'},
-      'lg': {'max' : '1024px'},
-      'md': {'max': '768px'},
-      'sm': {'max' : '640px'},
-      'xs': {'max' : '475px'},
+      "2xl": {max: "1536px"},
+      xl: {max: "1280px"},
+      lg: {max: "1024px"},
+      md: {max: "768px"},
+      sm: {max: "640px"},
+      xs: {max: "475px"},
+      xxs: {max: "400px"},
     },
     extend: {
       colors: {
@@ -51,5 +55,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+};

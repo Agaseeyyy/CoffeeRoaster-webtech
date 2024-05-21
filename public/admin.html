@@ -1,75 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Panel - CoffeeRoaster</title>
-  <link rel="icon" href="/img/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="output.css">
-  <script src="headerFooterManager.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - CoffeeRoaster</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="headerFooterManager.js"></script>
 </head>
 <body class="h-screen bg-gray-100 font font-inter">
     <special-header></special-header>
 
-    <div class="container mx-auto px-4 py-8 max-w-4xl">  <header class="mb-4">
-            <h1 class="text-xl font-bold">CoffeeRoaster Mini CRUD System</h1>
-        </header>
-        <section class="mb-4">
-            <h2 class="text-lg font-bold mb-2">Create New Post</h2>
-            <form>
-                <div class="flex flex-col mb-2">
-                    <label for="title" class="mb-1">Title</label>
-                    <input id="addtitle" type="text" id="title" name="title" class="border rounded-md px-2 py-1">
-                </div>
-                <div class="flex flex-col mb-2">
-                    <label for="image" class="mb-1">Featured Image</label>
-                    <input type="file" id="addimage" name="image" class="border rounded-md px-2 py-1">
-                </div>
-                <div class="mb-2">
-                    <label for="content">Content</label>
-                    <textarea  id="addcontent" name="content" rows="10" class="border rounded-md px-2 py-1 w-full"></textarea>
-                </div>
-                <button onclick="addBlogpost(event)" class="bg-customred text-white px-4 py-2 rounded-md hover:bg-rose-800">Create Post</button>
-            </form> 
-        </section>
-        <section class="mb-4">
-            <h2 class="text-lg font-bold mb-2">List of Posts</h2>
-            <table id="blog-posts-table" class="border border-collapse w-full">
-                <thead>
-                  <tr>
-                    <th class="px-2 py-1 border border-gray-200">Title</th>
-                    <th class="px-2 py-1 border border-gray-200">Date</th>
-                    <th class="actions-column">Actions</th> </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-              
-          </section>
+    <!--add post-->
+    <div class="container max-w-4xl px-4 py-8 mx-auto">
 
-          <div id="update-post-popup" class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 z-50 hidden flex justify-center items-center">
-            <div class="bg-white rounded-lg shadow-md px-8 py-6 w-3/4">
-              <h2 class="text-lg font-bold mb-4">Update Post</h2>
-              <form id="update-post-form">
-                <div class="mb-4">
-                  <label for="update-post-title" class="block mb-1 font-bold">Title</label>
-                  <input type="text" id="update-post-title" name="title" class="border rounded-md px-2 py-1 w-full">
-                </div>
-                <div class="mb-4">
-                  <label for="update-post-image" class="block mb-1 font-bold">Featured Image</label>
-                  <input type="file" id="update-post-image" name="image" class="border rounded-md px-2 py-1 w-full">
-                </div>
-                <div class="mb-4">
-                  <label for="update-post-content" class="block mb-1 font-bold">Content</label>
-                  <textarea id="update-post-content" name="content" rows="10" class="border rounded-md px-2 py-1 w-full"></textarea>
-                </div>
-                <div class="flex justify-end">
-                  <button type="button" class="bg-gray-400 text-white px-4 py-2 rounded-md mr-2 hover:bg-gray-500" onclick="closeUpdatePostPopup()">Cancel</button>
-                  <button onclick="editPost()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">Update Post</button>
-                </div>
-              </form>
-            </div>
+      <header class="mb-4">
+        <h1 class="text-xl font-bold">CoffeeRoaster Mini CRUD System</h1>
+      </header>
+
+      <section class="mb-4">
+        <h2 class="mb-2 text-lg font-bold">Create New Post</h2>
+
+        <form>
+          <div class="flex flex-col mb-2">
+            <label for="title" class="mb-1">Title</label>
+            <input id="addtitle" type="text" id="title" name="title" class="px-2 py-1 border rounded-md"/>
           </div>
-          
+
+          <div class="flex flex-col mb-2">
+            <label for="image" class="mb-1">Featured Image</label>
+            <input type="file" id="addimage" name="image" class="px-2 py-1 border rounded-md"/>
+          </div>
+
+          <div class="mb-2">
+            <label for="content">Content</label>
+            <textarea id="addcontent" name="content" rows="10" class="w-full px-2 py-1 border rounded-md"></textarea>
+          </div>
+
+          <button onclick="addBlogpost(event)" class="px-4 py-2 text-white rounded-md bg-customred hover:bg-rose-800">
+            Create Post
+          </button>
+        </form>
+
+      </section>
+
+      <!-- blogpost list -->
+      <section class="mb-4">
+        <h2 class="mb-2 text-lg font-bold">List of Posts</h2>
+        <table id="blog-posts-table" class="w-full border border-collapse">
+          <thead>
+            <tr>
+              <th class="px-2 py-1 border border-gray-200">Title</th>
+              <th class="px-2 py-1 border border-gray-200">Date</th>
+              <th class="actions-column">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- popup for edit post-->
+      <div id="update-post-popup" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full bg-gray-900 bg-opacity-50">
+        <div class="w-3/4 px-8 py-6 bg-white rounded-lg shadow-md">
+          <h2 class="mb-4 text-lg font-bold">
+            Update Post
+          </h2>
+          <form id="update-post-form">
+
+            <div class="mb-4">
+              <label for="update-post-title" class="block mb-1 font-bold">
+                Title
+              </label>
+              <input type="text" id="update-post-title" name="title" class="w-full px-2 py-1 border rounded-md"/>
+            </div>
+
+            <div class="mb-4">
+              <label for="update-post-image" class="block mb-1 font-bold">
+                Featured Image
+              </label>
+              <input type="file" id="update-post-image" name="image" class="w-full px-2 py-1 border rounded-md"/>
+            </div>
+
+            <div class="mb-4">
+              <label for="update-post-content" class="block mb-1 font-bold">
+                Content
+              </label>
+              <textarea id="update-post-content" name="content" rows="10" class="w-full px-2 py-1 border rounded-md"></textarea>
+            </div>
+
+            <div class="flex justify-end">
+              <button type="button" class="px-4 py-2 mr-2 text-white bg-gray-400 rounded-md hover:bg-gray-500" onclick="closeUpdatePostPopup()">
+                Cancel
+              </button>
+              <button onclick="editPost()" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-700">
+                Update Post
+              </button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
     </div>
     <script src="index.js"></script>
     <script src="script.js"></script>
