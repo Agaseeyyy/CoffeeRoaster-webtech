@@ -6,7 +6,7 @@ if (retrieve_saved_blogposts) {
   blogposts = JSON.parse(retrieve_saved_blogposts);
 } else {
   let default_blogposts = [
-    {id: 1, title: "Mastering the Chemex: A Beginner's Guide", img: "/img/s1.jpeg", date: "May 2, 2024", content: `
+    {id: 1, title: "Mastering the Chemex: A Beginner's Guide", img: "../img/s1.jpeg", date: "May 2, 2024", content: `
         Introduction:
         Elegant, timeless, and capable of brewing an exceptionally clean and nuanced cup - the Chemex has earned a beloved place in the pour-over world. This iconic brewer's genius lies in its simple yet brilliant design featuring a wood collar, glass flask, and thick paper filters. While achieving mastery with the Chemex takes some practice, this beginner's guide will have you brewing delectable cups in no time.
         
@@ -42,7 +42,7 @@ if (retrieve_saved_blogposts) {
         
         With some practice, you'll be brewing Chemex perfection. This elegant brewer rewards patience and precision with a delightfully clean, well-rounded, and flavorful cup of coffee. Stay tuned for more pour-over tips!`,
     },
-    {id: 2, title: "Siphon Brewing: Brewing with Flare", img: "/img/s2.webp", date: "May 3, 2024", content: `
+    {id: 2, title: "Siphon Brewing: Brewing with Flare", img: "../img/s2.webp", date: "May 3, 2024", content: `
         Among the array of brew methods, few are as visually captivating and scientifically fascinating as siphon brewing. This theatrical technique combines elements of immersion and vacuum brewing to produce a remarkably clean and flavorful cup of coffee. If you're seeking a new brewing adventure that delights the senses, look no further than the siphon brewer.
         The Siphon Setup:
         At first glance, a siphon brewer resembles an elaborate scientific experiment with its two glass vessels connected by a narrow tube. Despite its complex appearance, the components are quite simple:
@@ -69,7 +69,7 @@ if (retrieve_saved_blogposts) {
         
         While siphon brewing does require some patience and finesse, the rewarding taste and sheer entertainment value make it well worth exploring. Embrace your inner mad coffee scientist and give this fascinating brewing device a try!`,
     },
-    {id: 3, title: "Creamy Homemade Coffee Liqueur Recipe", img: "/img/s3.jpeg", date: "May 5, 2024", content: `
+    {id: 3, title: "Creamy Homemade Coffee Liqueur Recipe", img: "../img/s3.jpeg", date: "May 5, 2024", content: `
         Introduction:
         There's nothing quite like sipping on a velvety, coffee-infused cocktail or dessert to satiate your caffeine cravings. But you don't need to splurge on pricey store-bought coffee liqueurs. With just a few simple ingredients, you can craft an exceptionally rich and creamy homemade coffee liqueur that rivals the best artisan brands. This easy recipe makes an indulgent addition to your favorite beverage or sweet treat.
         

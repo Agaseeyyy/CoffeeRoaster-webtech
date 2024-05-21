@@ -5,7 +5,7 @@ class SpecialHeader extends HTMLElement {
             <div class="container pl-2 pr-2 max-w-xxl 2xl:max-w-xl xl:max-w-lg lg:max-w-md md:max-w-sm sm:max-w-xs xs:w-full">
                 <nav class="grid w-full grid-flow-col place-items-center">
                     <a class="z-30 justify-self-start" href="index.html#" id="logo">
-                        <img src="/img/logo.png" alt="CoffeeRoaster" class="h-10 2xl:h-8 xl:h-7">
+                        <img src="../img/logo.png" alt="CoffeeRoaster" class="h-10 2xl:h-8 xl:h-7">
                     </a>
         
                     <button id="mobileMenuBtn" class="hidden md:block justify-self-end">
@@ -51,7 +51,7 @@ class SpecialFooter extends HTMLElement {
                     <div class="grid-flow-row col-span-2 row-span-2 lg:row-span-1 sm:col-span-3 xxs:col-span-5 xxs:place-self-center">
                         <div class="flex flex-row gap-6 xl:gap-4">
                             <a href="#">
-                                <img class="transition duration-200 size-14 hover:bg-slate-600 2xl:size-12 xl:size-9" src="/img/logo-footer.svg" alt="CoffeeRoaster">
+                                <img class="transition duration-200 size-14 hover:bg-slate-600 2xl:size-12 xl:size-9" src="../img/logo-footer.svg" alt="CoffeeRoaster">
                             </a>
                             <a href="#">
                                 <h1 class="text-5xl font-semibold transition duration-200 hover:text-slate-300 2xl:text-4xl xl:text-3xl md:text-2xl">
@@ -100,19 +100,19 @@ class SpecialFooter extends HTMLElement {
                         <div class="flex flex-row gap-3 pt-5">
                             <a href="https://www.facebook.com/Agaseeyyy" target="_blank"><img
                                     class="transition duration-200 2xl:size-10 md:size-9 hover:bg-slate-600"
-                                    src="/img/Facebook.svg" alt="Facebook"></a>
+                                    src="../img/Facebook.svg" alt="Facebook"></a>
                             <a href="https://twitter.com" target="_blank"><img
                                     class="transition duration-200 2xl:size-10 md:size-9 hover:bg-slate-600"
-                                    src="/img/Twitter.svg" alt="Facebook"></a>
+                                    src="../img/Twitter.svg" alt="Facebook"></a>
                             <a href="https://instagram.com/_agaseeyyy" target="_blank"><img
                                     class="transition duration-200 2xl:size-10 md:size-9 hover:bg-slate-600"
-                                    src="/img/Instagram.svg" alt="Facebook"></a>
+                                    src="../img/Instagram.svg" alt="Facebook"></a>
                             <a href="https://www.linkedin.com/in/agassi-bustarga-2463b930a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&fbclid=IwAR2BXo5d7SOcTsWEW8Z9r67L9RdRiMfYrWt1dD46P5zbHXHR8NafZgKiaNY"
                                 target="_blank"><img class="transition duration-200 2xl:size-10 md:size-9 hover:bg-slate-600"
-                                    src="/img/Linkedin.svg" alt="Facebook"></a>
+                                    src="../img/Linkedin.svg" alt="Facebook"></a>
                             <a href="https://www.youtube.com" target="_blank"><img
                                     class="transition duration-200 2xl:size-10 md:size-9 hover:bg-slate-600"
-                                    src="/img/Youtube.svg" alt="Facebook"></a>
+                                    src="../img/Youtube.svg" alt="Facebook"></a>
                         </div>
                     </div>
         
